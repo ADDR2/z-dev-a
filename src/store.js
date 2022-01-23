@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import MainReducer from './reducers/main';
+import MainReducer, { MainReducerKeys } from './reducers/main';
 
 const reducer = combineReducers({
-    main: MainReducer
+    [MainReducerKeys.name]: MainReducer
 });
 
 const sagaMiddleware = createSagaMiddleware();
