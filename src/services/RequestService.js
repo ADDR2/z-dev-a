@@ -33,7 +33,7 @@ class RequestService {
         }
     }
 
-    static get(endpoint = '', options = {}) {
+    static get(endpoint = '', options = {}, formatter) {
         const url = `${BACKEND_PREFIX_URL}${endpoint}`;
         const cachedResponse = RequestService.getRequestFromCache(url);
 
@@ -58,6 +58,7 @@ class RequestService {
                 return result.json();
             })
             .then(response => {
+                if (formatter) response = formatter(response);
                 RequestService.cacheRequest(url, response);
                 return response;
             })

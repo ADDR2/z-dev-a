@@ -3,4 +3,11 @@
 :root {
     --header-boder-color: #{colors.$zara-grey};
     --header-logo-color: #{colors.$zara-light-blue};
+    --podcast-thumbnail-shadow-color: #{colors.$zara-black-shadow};
+    --podcast-thumbnail-name-color: #{colors.$zara-black};
+    --podcast-thumbnail-author-color: #{colors.$zara-dark-grey};
+    --filter-results-amount-background: #{colors.$zara-light-blue};
+    --filter-results-amount-color: #{colors.$zara-white};
+    --filter-podcasts-border-color: #{colors.$zara-grey};
+    --app-focus-color: #{colors.$zara-light-blue};
 }

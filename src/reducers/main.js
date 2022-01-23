@@ -9,7 +9,7 @@ export const mainReducerKeys = {
   
 
 const initialState = {
-    navigating: false
+    navigating: true
 };
 
 const MainReducer = (state = initialState, action) => {
