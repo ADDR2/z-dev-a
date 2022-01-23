@@ -1,7 +1,10 @@
-export const MainActions = {
-    create: 'MAIN_CREATE',
-    update: 'MAIN_UPDATE',
-    clear: 'MAIN_CLEAR'
+export const MainReducerKeys = {
+    name: 'main',
+    actions: {
+        create: 'MAIN_CREATE',
+        update: 'MAIN_UPDATE',
+        clear: 'MAIN_CLEAR'
+    }
 };
   
 
@@ -11,9 +14,9 @@ const initialState = {
 
 const MainReducer = (state = initialState, action) => {
     switch (action.type) {
-        case MainActions.create: return action.payload;
-        case MainActions.update: return { ...state, ...action.payload };
-        case MainActions.clear: return initialState;
+        case MainReducerKeys.actions.create: return action.payload;
+        case MainReducerKeys.actions.update: return { ...state, ...action.payload };
+        case MainReducerKeys.actions.clear: return initialState;
         default: return state;
     }
 };

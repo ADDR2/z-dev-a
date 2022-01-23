@@ -1,0 +1,6 @@
+@use './colors.scss';
+
+:root {
+    --header-boder-color: #{colors.$zara-grey};
+    --header-logo-color: #{colors.$zara-light-blue};
+}
