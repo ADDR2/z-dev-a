@@ -5,6 +5,7 @@ $panel-padding: 1rem;
     width: 30%;
     min-width: calc(#{$image-size} + (2 * #{$panel-padding}));
     box-shadow: var(--podcast-thumbnail-shadow-color) 0px 3px 8px;
+    border-radius: 6px;
     padding: $panel-padding;
 }
 

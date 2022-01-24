@@ -3,8 +3,8 @@ import {
     Routes,
     Route
 } from "react-router-dom";
+import Episode from "../components/Episode/Episode";
 import EpisodeList from "../components/EpisodeList/EpisodeList";
-
 import Header from "../components/Header/Header";
 import PageLoader from "../components/PageLoader/PageLoader";
 import Home from "../pages/Home/Home";
@@ -27,7 +27,7 @@ const MainRouter = () => {
                     }
                 />
                 <Route
-                    path="/podcast/:podcastId"
+                    path="/podcast/:podcastId/"
                     element={
                         <PageLoader
                             pageSaga={podcastSagaNames.FETCH_PODCAST_DETAILS}
@@ -35,6 +35,7 @@ const MainRouter = () => {
                         />
                     }
                 >
+                    <Route path="episode/:episodeId" element={ <Episode /> }/>
                     <Route path="" element={ <EpisodeList /> }/>
                 </Route>
                 { /*<Route path="*" element={ <NotFound /> } />*/ }
