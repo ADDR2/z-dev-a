@@ -9,7 +9,7 @@ const Home = () => {
 
     const filteredPodcasts = useMemo(
         () => {
-            return podcasts.filter(
+            return Object.values(podcasts).filter(
                 ({ name, author }) => {
                     const filterParsed = filter.trim().toLowerCase();
                     const nameParsed = name.trim().toLowerCase();

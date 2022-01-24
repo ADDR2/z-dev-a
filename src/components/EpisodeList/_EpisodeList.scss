@@ -1,0 +1,31 @@
+.episode-list-container {
+    width: 60%;
+    min-width: 500px;
+}
+
+.episodes-amount {
+    padding: 1rem;
+    box-shadow: var(--podcast-thumbnail-shadow-color) 0px 3px 8px;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.episodes-table-container {
+    margin: 1rem 0 0 0;
+    box-shadow: var(--podcast-thumbnail-shadow-color) 0px 3px 8px;
+    border-radius: 6px;
+    padding: 1rem;
+    height: 100%;
+
+    & > * {
+        border: none;
+    }
+}
+
+.episode-link {
+    text-decoration: none;
+    
+    &:link {
+        color: var(--episode-list-link-color);
+    }
+}

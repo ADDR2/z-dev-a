@@ -13,7 +13,7 @@ const PageLoader = ({ pageSaga, component, ...inheritedProps }) => {
         () => {
             dispatch({ type: pageSaga, payload: params });
         },
-        [ dispatch, pageSaga, params ]
+        [ dispatch, pageSaga ]
     );
 
     if (navigating) return <></>;
