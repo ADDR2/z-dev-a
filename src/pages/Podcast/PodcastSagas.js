@@ -39,6 +39,7 @@ function* fetchPodcastDetails({ payload: { podcastId } }) {
     } catch (error) {
         console.warn(error);
     } finally {
+        yield call(() => new Promise(resolve => setTimeout(resolve, 1000)));
         yield put({ type: updateMain, payload: { navigating: false } });
     }
 }
