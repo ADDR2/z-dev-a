@@ -39,7 +39,7 @@ class RequestService {
 
         if (cachedResponse) {
             const { response, requestTimestamp } = cachedResponse;
-            const requestOlderThanADay = (requestTimestamp + (24 * 60 * 60 * 1000)) <= (+new Date());
+            const requestOlderThanADay = (requestTimestamp + (24 * 60 * 60 * 1000)) < (+new Date());
 
             if (!requestOlderThanADay) return Promise.resolve(response);
         }
