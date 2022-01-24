@@ -27,6 +27,7 @@ const Home = () => {
             <div className="filter-section">
                 <div className="podcasts-amount">{ filteredPodcasts?.length || 0 }</div>
                 <input
+                    placeholder="Fiter podcasts..."
                     className="podcasts-filter"
                     value={filter}
                     onChange={({ target: { value } }) => setFilter(value)}
