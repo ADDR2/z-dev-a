@@ -25,10 +25,20 @@ class ResponseFormatter {
 
         episodeList.shift();
         for (const episode of episodeList) {
+            let duration = '-';
+
+            if (episode.trackTimeMillis) {
+                const timeInSeconds = episode.trackTimeMillis / 1000;
+                const timeInMinutes = timeInSeconds / 60;
+                const integerTimePart = Math.floor(timeInMinutes);
+                const decimalPart = timeInMinutes - integerTimePart;
+                duration = `${integerTimePart}:${Math.floor(decimalPart * 60)}`;
+            }
+
             result[episode.trackId] = {
                 name: episode.trackName,
-                releaseDate: episode.releaseDate,
-                duration: episode.trackTimeMillis,
+                releaseDate: episode.releaseDate ? new Date(episode.releaseDate).toLocaleDateString() : '-',
+                duration,
                 description: episode.description,
                 audio: episode.episodeUrl,
                 id: episode.trackId
