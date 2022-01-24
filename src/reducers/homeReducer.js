@@ -9,7 +9,7 @@ export const homeReducerKeys = {
   
 
 const initialState = {
-    podcasts: []
+    podcasts: {}
 };
 
 const HomeReducer = (state = initialState, action) => {

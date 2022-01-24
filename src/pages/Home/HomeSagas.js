@@ -16,7 +16,7 @@ function* fetchPodcasts() {
         yield put({ type: updateMain, payload: { navigating: true } });
         const podcasts = yield call(
             RequestService.get,
-            '/toppodcasts/limit=100/genre=1310/json',
+            '/us/rss/toppodcasts/limit=100/genre=1310/json',
             {},
             ResponseFormatter.formatPodcastList
         );
