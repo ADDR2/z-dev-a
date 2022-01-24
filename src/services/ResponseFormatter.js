@@ -41,6 +41,8 @@ class ResponseFormatter {
                 duration,
                 description: episode.description,
                 audio: episode.episodeUrl,
+                episodeContentType: episode.episodeContentType,
+                episodeFileExtension: episode.episodeFileExtension,
                 id: episode.trackId
             };
         }

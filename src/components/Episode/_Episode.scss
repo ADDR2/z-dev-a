@@ -1,0 +1,27 @@
+.episode-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-width: 500px;
+    padding: 1rem;
+    box-shadow: var(--podcast-thumbnail-shadow-color) 0px 3px 8px;
+    border-radius: 6px;
+
+    & > .rich-editor {
+        margin: 1rem 0 0 0;
+
+        & > .ql-container {
+            border: none;
+        }
+    }
+}
+
+.episode-name {
+    margin: 0;
+    word-break: break-word;
+}
+
+.episode-player {
+    margin: auto 0 0 0;
+    display: block;
+}

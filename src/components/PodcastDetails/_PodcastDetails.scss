@@ -34,12 +34,14 @@ $panel-padding: 1rem;
     font-weight: bold;
     margin: 0;
     color: var(--podcast-detail-name-color);
+    word-break: break-word;
 }
 
 .podcast-detail-author {
     margin: 0.2rem 0 0 0;
     font-style: italic;
     color: var(--podcast-detail-author-color);
+    word-break: break-word;
 }
 
 .podcast-detail-description {
