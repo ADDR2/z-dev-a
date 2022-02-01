@@ -22,7 +22,7 @@ const MainRouter = () => {
                     element={
                         <PageLoader
                             pageSaga={homeSagaNames.FETCH_PODCASTS}
-                            component={routerProps => <Home {...routerProps}/>}
+                            Component={Home}
                         />
                     }
                 />
@@ -31,7 +31,7 @@ const MainRouter = () => {
                     element={
                         <PageLoader
                             pageSaga={podcastSagaNames.FETCH_PODCAST_DETAILS}
-                            component={routerProps => <Podcast {...routerProps}/>}
+                            Component={Podcast}
                         />
                     }
                 >

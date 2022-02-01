@@ -1,5 +1,7 @@
+@use '../../scss/abstracts/mixins';
+
 .zara-podcast {
-    padding: 2rem 1rem 1rem 1rem;
+    @include mixins.pageLayout;
     display: flex;
     column-gap: 2rem;
     justify-content: space-between;

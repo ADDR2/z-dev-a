@@ -16,7 +16,7 @@ const Episode = () => {
             <ReactQuill className="rich-editor" theme="snow" value={ description } readOnly modules={{ toolbar: null }}/>
             
             <div className="episode-player">
-                <audio controls>
+                <audio className="player-control" controls>
                     <source src={audio} type={`${episodeContentType}/${episodeFileExtension}`} />
                     Your browser does not support the audio element.
                 </audio>

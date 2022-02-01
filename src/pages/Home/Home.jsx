@@ -1,10 +1,11 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import PodcastThumbnail from "../../components/PodcastThumbnail/PodcastThumbnail";
 import { homeReducerKeys } from "../../reducers/homeReducer";
 
 const Home = () => {
     const { podcasts } = useSelector(reducers => reducers[homeReducerKeys.name]);
+    const filterRef = useRef(null);
     const [ filter, setFilter ] = useState('');
 
     const filteredPodcasts = useMemo(
@@ -22,6 +23,13 @@ const Home = () => {
         [ podcasts, filter ]
     );
 
+    useEffect(
+        () => {
+            filterRef?.current?.focus();
+        },
+        []
+    );
+
     return (
         <div className="zara-home">
             <div className="filter-section">
@@ -29,6 +37,7 @@ const Home = () => {
                 <input
                     placeholder="Fiter podcasts..."
                     className="podcasts-filter"
+                    ref={filterRef}
                     value={filter}
                     onChange={({ target: { value } }) => setFilter(value)}
                 />
